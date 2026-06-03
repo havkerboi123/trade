@@ -224,7 +224,7 @@ def check_open_trades():
 
 def run_bot():
     print("Bot started, checking every 15 minutes...")
-    send_discord(f"🤖 **Forex Bot Started** — Monitoring {', '.join(INSTRUMENTS)} on 15M timeframe")
+    send_discord(f"🤖 **Bot Started** — {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M')}")
 
     while True:
         try:
@@ -347,3 +347,4 @@ def run_bot():
         time.sleep(60 * 15)
 
 run_bot()
+
